@@ -1,0 +1,14 @@
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  script:
+    - pytest test_helloworld.py
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deployment simulated"
+  when: on_success
